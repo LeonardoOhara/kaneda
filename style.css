@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";  
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    background: linear-gradient(rgba(0,0,0), black);
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px 0;
+    display: inline-block;
+    margin: 15px 10px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    transition: all 0.25s ease-in-out;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid white;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h1 {
+    font-size: 70px;
+    color: white;
+}
+
+section:nth-of-type(1){
+    background-color: rgba(5,6,11);
+    
+}
+
+section:nth-of-type(2){
+    background-image: url("assets2/moto2.jpg");
+}
+
+section:nth-of-type(3){
+    background-image: url("assets2/moto3.jpg");
+}
+
+section:nth-of-type(4){
+    background-image: url("assets2/moto1.jpg");
+}
+
+img.bg {
+    width: 500px;
+    background-color: rgba(51, 59, 71, 0.3);
+    position: absolute;
+    left: 100px;
+}
+
+.slider {
+    height: 250px;
+    margin: 0;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    left: 600px;
+    
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 10);
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 5));
+    }
+}
+
+.slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+
+img {
+    width: 100%;
+    transition: transform 1s;
+}
+
+img:hover{
+    transform: translateZ(20px);
+}
+
+/* Gradient Shadows */
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right,rgba(255, 255, 255, 0.705) 0%,
+    rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+#sessao1 h1 {
+    font: 1em sans-serif;
+    font-size: 40px;
+    color: white;
+    text-align: top;
+    position: absolute;
+    top: 200px
+
+}
+
+#whats {
+    display: block;
+    width: 50px;
+    height: 50px;
+    
+   
+}
+
+
