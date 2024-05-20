@@ -21,67 +21,108 @@
     </nav>
 
     <section id="sessao1">
+
         <img class="bg" src="./assets2/kanedabg1.JPG" alt="logo kaneda">
-
-        <div class="slider">
-            <div class="slide-track">
-                <div class="slide">
-                    <img src="./slider/foto1.JPG" alt="foto1">
-                </div>
-                <div class="slide">
-                    <img src="./slider/foto2.JPG" alt="foto1">
-                </div>
-                <div class="slide">
-                    <img src="./slider/foto3.JPG" alt="foto1">
-                </div>
-                <div class="slide">
-                    <img src="./slider/foto4.JPG" alt="foto1">
-                </div>
-                <div class="slide">
-                    <img src="./slider/foto5.JPG" alt="foto1">
-                </div>    
-
-                <div class="slide">
-                    <img src="./slider/foto1.JPG" alt="foto1">
-                </div>
-                <div class="slide">
-                    <img src="./slider/foto2.JPG" alt="foto1">
-                </div>
-                <div class="slide">
-                    <img src="./slider/foto3.JPG" alt="foto1">
-                </div>
-                <div class="slide">
-                    <img src="./slider/foto4.JPG" alt="foto1">
-                </div>
-                <div class="slide">
-                    <img src="./slider/foto5.JPG" alt="foto1">
-                </div>    
-
-            </div>
-        </div>      
+    
     </section>
+
     
     <section id="sessao2">
-        <h1>Sessão 2</h1>
+
+        <div class="container2">
+            <div class="slider">
+            
+            <div class="slides" style="--img: url('./slider/foto2.jpg')">
+                <div class= "content">
+                    <div class= "content">
+                        <h2>Elétrica </h2>
+                        <p>Serviço de elétrica com qualidade e segurança.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('./slider/foto3.jpg')">
+                <div class= "content">
+                    <div class= "content">
+                        <h2>Slide 3 </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui vero omnis laudantium quia inventore ipsa, voluptates laborum numquam quas, eos cumque? Minima totam at fugiat sit officia nobis quas fugit?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('./slider/foto4.jpg')">
+                <div class= "content">
+                    <div class= "content">
+                        <h2>Slide 4 </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui vero omnis laudantium quia inventore ipsa, voluptates laborum numquam quas, eos cumque? Minima totam at fugiat sit officia nobis quas fugit?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('./slider/foto5.jpg')">
+                <div class= "content">
+                    <div class= "content">
+                        <h2>Slide 5 </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui vero omnis laudantium quia inventore ipsa, voluptates laborum numquam quas, eos cumque? Minima totam at fugiat sit officia nobis quas fugit?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('./slider/foto6.jpg')">
+                <div class= "content">
+                    <div class= "content">
+                        <h2>Suspensão</h2>
+                        <p>Temos ferramentas para instalação de retentores e utilizamos as melhores marcas do mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+        <span class= "prev"></span>
+        <span class= "next"></span>
+        </div>
+
+        <script>
+            let next = document.querySelector('.next');
+            let prev = document.querySelector('.prev');
+            let slider = document.querySelector('.slider'); // Corrigido para selecionar um único contêiner de slider
+    
+            next.addEventListener('click', function() {
+                let slides = document.querySelectorAll('.slides'); // Seleciona todos os slides
+                slider.appendChild(slides[0]); // Move o primeiro slide para o final
+            });
+    
+            prev.addEventListener('click', function() {
+                let slides = document.querySelectorAll('.slides'); // Seleciona todos os slides
+                slider.prepend(slides[slides.length - 1]); // Move o último slide para o início
+            });
+        </script>
+
     </section>
 
     <section id="sessao3">
-        <h1>Sessão 3</h1>
-    </section>
 
-    <section id="sessao4">
-        <ul>
-            <li>
-                <img src="logos/insta.png" width="40">
-            </li>
-            <li>
-                <img src="logos/whats.png" width="40">
-            </li>
-            <li></li>
-        </ul>
         
     </section>
 
+    <section id="sessao4">
+        <main class="container">
+            <div>
+                <ion-icon name="logo-instagram"></ion-icon>
+            </div>
+            </ul>
+            <a href="https://www.instagram.com/kanedasmmx/"><p>Instagram</p></a>
+        </main>
+
+        <main class="container">
+            <div>
+                <ion-icon name="logo-instagram"></ion-icon>
+            </div>
+            </ul>
+            <a href="https://www.instagram.com/kanedasmmx/"><p>Instagram</p></a>
+        </main>
+    </section>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
