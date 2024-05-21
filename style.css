@@ -2,16 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Open Sans";  
+     
     
 }
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    
-    
-    
+    overflow-x: hidden; 
     
 }
 
@@ -51,6 +48,7 @@ section {
     background-size: cover;
     display: flex;
     align-items: center;
+    
 }
 
 section h1 {
@@ -84,7 +82,36 @@ img.bg {
     margin: 0 auto; 
 }
 
+.texto1 , .imgsobre {
+    visibility: hidden;
+ 
+}
 
+.imgsobre1 {
+    width: 40%;
+}
+
+.imgsobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.texto1 {
+    width: 500px;
+    height: 500px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto1 p{
+    font-size: 23px;
+    background-color: #111111b2;
+    
+}
+    
 
 #sessao1 h1 {
     font: 1em sans-serif;
@@ -92,7 +119,7 @@ img.bg {
     color: white;
     text-align: top;
     position: absolute;
-    top: 200px
+    top: 200px;
 
 }
 
@@ -246,13 +273,16 @@ a {
 .content
 {
     position: relative;
-    padding: 40px;
     max-width: 600px;
     transition: 0.25s;
     transition-delay: 0s;
     transform: translateY(40px);
     z-index: 10000;
     opacity: 0;
+    background-color: rgba(0, 0, 0, 0.63);
+    border-radius: 5px;
+    
+    
 }
 
 
@@ -260,12 +290,13 @@ a {
     font-size: 4em;
     color: rgb(255, 255, 255);
     
+    
 }
 
 .content p {
     font-size: 1em;
     color: white;
-    padding: 30px;
+    
 }
 
 
@@ -282,7 +313,7 @@ a {
 @media (max-width: 900px) {
     .slider{
         position: absolute;
-        inset: 40px 40px 200px 40px;
+        inset: 200px 40px 200px 40px;
     }
     .slider .slides{
         width: 100px;
@@ -309,88 +340,9 @@ a {
         left: 360px;
     }
 
-    
-    
-    section h1 {
-        font-size: 70px;
-        color: white;
-    }
-    
-    section:nth-of-type(1){
-        background-color: rgba(5,6,11);
-        
-        
-    }
-    
-    section:nth-of-type(2){
-        background-color: rgba(5,6,11);
-        
-    }
-    
-    section:nth-of-type(3){
-        background-image: url("assets2/moto3.jpg");
-    }
-    
-    section:nth-of-type(4){
-        background-image: url("assets2/moto1.jpg");
-    }
-    
     img.bg {
-        display: flex;
-        width: 500px;
-        max-width: 1080px;
-        margin: 0 auto; 
+        margin: 0 auto
     }
     
-    
-    
-    #sessao1 h1 {
-        font: 1em sans-serif;
-        font-size: 40px;
-        color: white;
-        text-align: top;
-        position: absolute;
-        top: 200px
-    
-    }
-    
-    .container{
-        display: flex;
-        flex-direction: row;
-        height: 250px;
-        margin: 30px;
-        padding: 159px;
-        width: 600px;
-        overflow: hidden;
-        font-size: 50px;
-        color: aliceblue;
-        background-color: rgba(68, 68, 68, 0.76);
-        border-radius: 10px;
-        justify-content: space-between;
-        
-        
-    }
-    
-    a {
-        
-        text-align: center;
-        font-size: 20px;
-        text-decoration: none;
-        color: white;
-        
-        
-    }
-    
-    .container2 {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        
-        
-    
-    }
-    
+ 
 }
