@@ -4,14 +4,27 @@ window.revelar = ScrollReveal({reset:true})
 
 revelar.reveal('.texto1',{
     origin: 'left',
-    distance: '400px',
+    distance: '500px',
     duration: 2000,
-    reset: true
+    
 })
 
 revelar.reveal('.imgsobre',{
     origin: 'right',
-    distance: '400px',
+    distance: '500px',
     duration: 2000,
-    reset: true
 })
+
+revelar.reveal('.container2',{
+    origin: 'center',
+    distance: '10px',
+    duration: 2000,
+    
+})
+
+revelar.reveal('.slider',{
+    origin: 'right',
+    distance: '500px',
+    duration: 2000,
+})
+
