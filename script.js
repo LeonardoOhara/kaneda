@@ -28,3 +28,6 @@ revelar.reveal('.slider',{
     duration: 2000,
 })
 
+
+
+

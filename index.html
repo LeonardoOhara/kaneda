@@ -1,129 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaneda Oficina de Motos</title>
-
+    <!-- GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Fim GOOGLE FONTS-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js" defer></script>
-
-
-    
-
 </head>
 
-
 <body>
-
     <header>
         <div class="interface">
-        <nav class="menu"><!--NavBar-->
-            <ul>
-                <li><a href="#sessao1">Home</a></li>
-                <li><a href="#sessao3">Quem Somos</a></li>
-                <li><a href="#sessao2">Serviços</a></li>
-                <li><a href="#sessao4">Contatos</a></li>
-            </ul>
+            <div class="logo">
+                <a href="#">
+                    <img src="./assets2/logoheader.JPG" alt="Logo Kaneda">
+                </a><!--logo-->
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#sessao1">Inicio</a></li>
+                    <li><a href="#sessao2">Serviços</a></li>
+                    <li><a href="#sessao3">Sobre Nós</a></li>
+                    <li><a href="#sessao4">Contato</a></li>
+                </ul>
+
             </nav>
-        </div><!--interfaces-->
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
+
+            </div><!--contato-->
+        </div><!--interface-->
     </header>
-    
+
 <main>
-    <section class ="sessao1" id="sessao1">
-        <img class="bg" src="./assets2/kanedabg1.JPG" alt="logo kaneda">
-    </section> <!--Home-->
-    
-    <section class = "sessao3" id="sessao3"> <!--sobre nos-->
-        <div class="texto1">
-            <h1>Sobre Nós</h1>
-            <p>A primeira foto a ser postado no perfil. Uma grande história. Um novo empreendimento. Somos 2 amigos que tem em comum uma paixão chamada motocicletas e dessa paixão veio a ideia de abrir uma oficina. Toda estrutura e conhecimentos através de cursos estão sendo lapidados para oferecer a vocês clientes um trabalho de qualidade. Muito obrigado a todos que acreditaram e ajudaram a dar o primeiro passo nesse sonho! Somos a Oficina Kaneda e sejam muito bem vindos.</p>   
-        </div><!--Texto1-->
-        <div class="sobre">
-        <img class="imgsobre" src="./assets2/kaneda.jpg" alt="kaneda">
-        </div><!--imgsobre-->
-    
-        </section>
+    <section class="topo-do-site" id="sessão1">
+        <div class="interface">
+            <div class="flex">
+                <div class="txt-topo-site">
+                    <h1>Bem Vindo a Kaneda Oficina de Motos</h1>
+                    <p>Na Kaneda, cuidamos da sua moto com paixão e experiência. Oferecemos manutenção, reparos e customizações com peças de alta qualidade. Confie na gente para manter sua moto pronta para qualquer aventura. Venha para a Kaneda e sinta a diferença no cuidado e na performance.</p>
+                </div><!--txt-topo-site-->
 
-    <section class= "sessao2" id="sessao2"> <!--Serviços-->
-
-    
-        <div class="container2">
-            <div class="slider">
+                <div class="img-topo-site">
+                    <img src="./assets2/kanedacapa.png" alt="logo kaneda">
+                </div><!--img-topo-site-->
             
-            <div class="slides" style="--img: url('./slider/foto1.jpeg')">
-                <div class= "content">
+            </div><!--flex-->
+        </div><!--interface-->
+    </section><!--topo-do-site-->
+
+    <section class="especialidades" id="sessao2">
+        <div class="interface">
+            <h2>NOSSOS SERVIÇOS </h2>
+            <div class="flex">
+
                 
-                </div>
-            </div>
-            <div class="slides" style="--img: url('./slider/foto8.jpg')">
-                <div class= "content">
-                </div>
-            </div>
-            <div class="slides" style="--img: url('./slider/foto4.jpg')">
-                <div class= "content">
-                </div>
-            </div>
-            <div class="slides" style="--img: url('./slider/foto5.jpg')">
-                <div class= "content">
-                </div>
-            </div>
-            <div class="slides" style="--img: url('./slider/foto7.webp')">
-                <div class= "content">                   
-                </div>
-            </div>
-        </div>
-        
-        <div class="buttons">
-        <span class= "prev"></span>
-        <span class= "next"></span>
-        </div>
+                <div class="container">
+                    <div class="box">
+                        <img src="./slider/foto2.JPG" alt="">
 
-        <script>
-            let next = document.querySelector('.next');
-            let prev = document.querySelector('.prev');
-            let slider = document.querySelector('.slider'); // Corrigido para selecionar um único contêiner de slider
-    
-            next.addEventListener('click', function() {
-                let slides = document.querySelectorAll('.slides'); // Seleciona todos os slides
-                slider.appendChild(slides[0]); // Move o primeiro slide para o final
-            });
-    
-            prev.addEventListener('click', function() {
-                let slides = document.querySelectorAll('.slides'); // Seleciona todos os slides
-                slider.prepend(slides[slides.length - 1]); // Move o último slide para o início
-            });
+                    </div>
+                    <div class="box">
+                        <img src="./slider/foto4.JPG" alt="">
+                        
+                    </div>
+                    <div class="box">
+                        <img src="./slider/foto6.JPG" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="./slider/foto7.webp" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="./slider/foto4.JPG" alt="">
+                    </div>
+                </div> <!--container-->  
 
-            // Função para clicar automaticamente no botão "next" a cada 3 segundos
-            setInterval(function() {
-            next.click();
-            }, 3000); // 3000 milissegundos = 3 segundos
-        </script>
 
-    </section>
+            </div><!--flex-->
+        </div><!--interface-->
+    </section><!--especialidades-->
 
-    <section class = "sessao4" id="sessao4"><!--Contatos-->
-        <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9982798793285!2d-46.65864678945083!3d-23.532564278731293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b55c968f4d%3A0x197ce5c25a9e910a!2skaneda%20oficina%20de%20motos!5e0!3m2!1spt-BR!2sbr!4v1716309425924!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    
-    <div class="contato">
-        
-        <h1>Contato</h1>
-        <p>Entre em contato conosco</p>
-      
-          <div >
-            <a href="https://wa.me/qr/SGJ2XBNNYKKJO1" , target="_blank">
-              <ion-icon name="logo-whatsapp"></ion-icon
-            ></a>
-            <a href="https://www.instagram.com/kanedasmmx/" , target="_blank">
-              <ion-icon name="logo-instagram"></ion-icon
-            ></a>
-          </div>
-    
-  
-    </section>
-</main>
+    <section class="sobre" id="sessao3">
+        <div class="interface">
+            <div class="flex">
+                <div class="img-sobre">
+                    <img src="./assets2/kaneda.jpg" alt="logo kaneda">
+                </div><!--img-sobre-->
+                <div class="txt-sobre">
+                        <h2>Sobre Nós</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus soluta necessitatibus, nam fuga consectetur, iste unde eum esse quis deleniti aliquid perspiciatis laborum facere veniam fugiat temporibus recusandae nulla. Praesentium.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis numquam quos aut, totam alias labore cupiditate? Maxime excepturi repellat, illum totam aspernatur laudantium facilis. Corporis quas animi ipsa ullam accusantium.</p>
+                </div><!--txt-sobre-->                               
+            </div><!--flex--> 
+        </div><!--interface-->   
+    </section><!--sobre-->
+
+    <section class="contato" id="sessao4">
+        <div class="interface">
+            <div class="flex">
+                <h2 class="titulo"> Nossa Localização</h2>
+                <iframe class = "mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9982798793285!2d-46.65864678945083!3d-23.532564278731293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b55c968f4d%3A0x197ce5c25a9e910a!2skaneda%20oficina%20de%20motos!5e0!3m2!1spt-BR!2sbr!4v1716309425924!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe><!--mapa-->
+            
+            
+            </div><!--flex--> 
+        </div><!--interface-->   
+    </section><!--sobre-->
+</main> 
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
