@@ -35,13 +35,18 @@ h2.titulo {
 /* CABEÇALHO */
 
 header {
-    padding: 40px 4%;
+    padding: 10px 4%;
+    
 }
 
 header > .interface {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
 
 }
 
@@ -50,6 +55,7 @@ header a {
     text-decoration: none;
     display: inline-block;
     transition: 2.0s;
+    
 }
 
 header a:hover {
@@ -67,7 +73,7 @@ header nav ul li {
 }
 
 header .btn-contato button {
-    padding: 10px 40px;
+    padding: 5px 40px;
     font-size: 18px;
     font-weight: 600;
     background-color: aliceblue;
@@ -80,11 +86,12 @@ header .btn-contato button:hover {
     box-shadow: 0px 0px 8px white;
 }
 
+
+
 /* TOPO DO SITE */
 
 section.topo-do-site{
-    padding: 40px 4%;
-    
+    padding: 40px 4%;  
 }
 
 section.topo-do-site .flex {
@@ -123,30 +130,39 @@ section.topo-do-site .flex {
 /* ESTILO DAS ESPECIALIDADES */
 
 section.especialidades{
-    padding: 40px ;
+    padding: 40px auto ;
     
 }
 
 section.especialidades .flex {
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     
 }
 
- h2 {
+ .txt-container {
+    color: rgb(2, 2, 2);
+    font-size: 35px;
+    padding: 30px;
+
+}
+
+.especialidades h2 {
     color: rgb(2, 2, 2);
     font-size: 50px;
     text-align: center;
-    margin-top: 50px;
+    padding: 40px;
 }
 
+
 .container {
-    width: 80%;
+    width: 1200px;
     padding: 20px;
-    margin:100px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 20px;
 }
 
 .box{
@@ -154,6 +170,7 @@ section.especialidades .flex {
     margin: 0 10px;
     box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
     transition: 1s;
+    
 }
 
 .box img {
@@ -190,6 +207,7 @@ section.sobre .flex {
 .sobre .txt-sobre h2{
     font-size: 50px;
     margin-bottom: 32px;
+    color: white;
 }
 
 .sobre .txt-sobre p{
@@ -204,21 +222,27 @@ section.sobre .flex {
 /* ESTILO DA ROLAGEM DA PAGINA*/
 
 section:nth-of-type(1){
-    background-color:  rgb(2, 2, 4);;  
+    background-color:  rgb(2, 2, 4);;
+    
     
 }
 
 section:nth-of-type(2){
     background-color: rgb(255, 255, 255); 
+    
 }
 
 section:nth-of-type(3){   
-    background-color:  rgb(2, 2, 4);;  
+    background-color:  rgb(2, 2, 4);
+   
 }
 
 section:nth-of-type(4){   
-    background-color: rgba(5,6,11);  
+    background-color: rgba(5,6,11);
+   
 }
+
+/* SESSAO LOCALIZACAO CONTATO */
 
 section .contato {
     padding: 40px 4%;
@@ -237,4 +261,76 @@ section.contato .flex {
     width: 100%;
     height: 400px;
     padding: 40px;
+}
+
+
+/* RESPONSIVO */
+@media screen and (max-width: 1020px) {
+    
+    /* CLASSES GERAIS */
+
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    /* CABEÇALHO */
+
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+    
+
+    .img-topo-site img, .img-sobre img{
+        width: 100%;
+    }
+
+    
+    /* TOPO DO SITE*/
+
+   
+
+    section.topo-do-site .flex {
+        gap: 40px;
+        flex-direction: column-reverse
+    }
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        color: white;
+        font-size: 30px;
+    }
+
+    /* Servicos */
+
+    section.especialidades{
+        padding: 40px 8%;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 300px;
+        
+    }
+
+    /* ESTILO SOBRE */
+
+
+    section.sobre{
+    padding: 40px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
 }
