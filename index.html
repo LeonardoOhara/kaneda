@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--Fim GOOGLE FONTS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js" defer></script>
+    
 </head>
 
 <body>
@@ -25,14 +27,37 @@
                     <li><a href="#sessao3">Sobre Nós</a></li>
                     <li><a href="#sessao4">Localização</a></li>
                 </ul>
-
             </nav>
+
             <div class="btn-contato">
                 <a href="https://wa.me/qr/SGJ2XBNNYKKJO1" target="_blank" rel="noopener noreferrer">
                     <button>Whatsapp</button>
                 </a>
 
             </div><!--contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <ion-icon name="list-outline"></ion-icon>
+            </div><!--btn-abrir-menu-->
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div><!--btn-fechar-->
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#sessao2">Serviços</a></li>
+                        <li><a href="#sessao3">Sobre Nós</a></li>
+                        <li><a href="#sessao4">Localização</a></li>
+                        <li><a href="#">Whatsapp</a></li>
+                    </ul>
+                </nav>
+            </div><!--menu-mobile-->
+
+            <div class="overlay-menu" id="overlay-menu">
+            </div><!--overlay-menu-->
+
         </div><!--interface-->
     </header><!--cabeçalho-->
 
@@ -41,7 +66,7 @@
         <div class="interface">
             <div class="flex">
                 <div class="txt-topo-site">
-                    <h1>Bem Vindo a Kaneda</h1>
+                    <h1>Bem vindo a Kaneda</h1>
                     <p>Na Kaneda, cuidamos da sua moto com paixão e experiência. Oferecemos manutenção, reparos e customizações com peças de alta qualidade. Confie na gente para manter sua moto pronta para qualquer aventura. Venha para a Kaneda e sinta a diferença no cuidado e na performance.</p>
                 </div><!--txt-topo-site-->
 
@@ -58,37 +83,49 @@
             <h2>NOSSOS SERVIÇOS </h2>
             <div class="flex">
 
-                
+                <div class="container">
+                    
+                    <div class="flip">
+                        <div class="frente">
+                            <h2>Revisões</h2>                             
+                        </div>
+                        <div class="tras">
+                            <h2>Para revisão</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda accusantium tempore aut sit repudiandae eveniet libero maxime illum quidem! Totam, quam odio iure sapiente quidem dignissimos voluptas similique et.
+                            </p>
+                        </div>
+                    </div>
+
+                    
+                </div> <!--container-->  
 
                 <div class="container">
-                    <div class="box">
-                        <img src="./slider/foto2.JPG" alt="">
-                   </div>
-                    
-                   <div class="box">
-                        <img src="./slider/foto4.JPG" alt="">
+                    <div class="flip">
+                        <div class="frente1">
+                            <h2>Injeção Eletronica</h2>
+                        </div>
+                        <div class="tras">
+                            <h2>Injeção Eletronica</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda accusantium tempore aut sit repudiandae eveniet libero maxime illum quidem! Totam, quam odio iure sapiente quidem dignissimos voluptas similique et.
+                            </p>
+                        </div>
                     </div>
+                </div> <!--container-->
 
-                    <div class="box">
-                        <img src="./slider/foto6.JPG" alt="">
+                <div class="container">
+                    <div class="flip">
+                        <div class="frente2">
+                            <h2>Elétrica</h2>
+                        </div>
+                        <div class="tras">
+                            <h2>Mecânica</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda accusantium tempore aut sit repudiandae eveniet libero maxime illum quidem! Totam, quam odio iure sapiente quidem dignissimos voluptas similique et.
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="box">
-                        <img src="./slider/foto7.webp" alt="">                       
-                    </div>
-
-                    <div class="box">
-                        <img src="./slider/foto4.JPG" alt="">
-                    </div>
-                </div> <!--container-->  
-                
-
-                <div class="txt-container">
-                    <p>Mecânica - Eletrica - Suspensão - Freios - Injeção Eletrônica</p>
-                </div>
+                </div> <!--container-->
 
             </div><!--flex-->
-
         </div><!--interface-->
     </section><!--especialidades-->
 
@@ -113,24 +150,28 @@
                 <h2 class="titulo"> Nossa Localização</h2>
                 <iframe class = "mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9982798793285!2d-46.65864678945083!3d-23.532564278731293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b55c968f4d%3A0x197ce5c25a9e910a!2skaneda%20oficina%20de%20motos!5e0!3m2!1spt-BR!2sbr!4v1716309425924!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe><!--mapa-->
-            
+                
+
+                    <div class="btn-social">
+                        <a href="#"><button><ion-icon name="logo-whatsapp"></ion-icon></button></a>
+                        <a href="#"><button><ion-icon name="logo-instagram"></ion-icon></button></a>
+                    </div>
+    
+    
             
             </div><!--flex--> 
         </div><!--interface-->   
     </section><!--contato-->
 </main> 
-
+    <footer>
+        <div class="interface">
+            <div class="flex">
+                <p>desenvolvido por Leonardo Ohara </p>
+            </div>
+        </div><!--interface-->       
+    </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
-
 </body>
 </html>

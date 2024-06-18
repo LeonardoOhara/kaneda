@@ -20,10 +20,12 @@ body {
 .interface{
     max-width: 1280px;
     margin: 0 auto;
+    
 }
 
 .flex{
     display: flex;
+    
 }
 
 h2.titulo {
@@ -32,60 +34,68 @@ h2.titulo {
     text-align: center;
 }
 
-/* CABEÇALHO */
+/* MENU*/
 
 header {
-    padding: 10px 4%;
-    
+    padding: 20px 4%; 
 }
 
 header > .interface {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     position: fixed;
     left: 0;
     right: 0;
+    top: 0;
     z-index: 2;
-
 }
 
 header a {
-    color: rgb(68, 68, 68);
+    color: rgb(161, 159, 159);
     text-decoration: none;
     display: inline-block;
     transition: 2.0s;
-    
 }
 
-header a:hover {
+header nav.menu-desktop a:hover {
     color: aliceblue;
     transform: scale(1.05);
 }
 
 header nav ul {
     list-style-type: none;
+    
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
     display: inline-block;
-    padding: 0 50px;
+    padding: 0px 40px;
+    
 }
 
 header .btn-contato button {
-    padding: 5px 40px;
+
+    padding: 5px 20px;
     font-size: 18px;
-    font-weight: 600;
-    background-color: aliceblue;
-    border: 0;
+    font-weight: 500;
+    background-color: rgba(52, 241, 14, 0.247);
     border-radius: 20px;
     cursor: pointer;
+    border: none;
 }
 
 header .btn-contato button:hover {
-    box-shadow: 0px 0px 8px white;
+    box-shadow: 0px 0px 8px rgb(192, 192, 192);
 }
 
+.btn-contato, button{
+    padding: 20px 20px 0 200px;
+}
+
+.menu-mobile{
+    display: none;
+}
 
 
 /* TOPO DO SITE */
@@ -95,9 +105,12 @@ section.topo-do-site{
 }
 
 section.topo-do-site .flex {
+    padding: 200px 4%;
     align-items: center;
     justify-content: center;
     gap: 90px;
+    
+    
 }
 
 .topo-do-site h1 {
@@ -109,6 +122,7 @@ section.topo-do-site .flex {
 .topo-do-site .txt-topo-site p {
     color: white;
     margin: 40px 0;
+    text-align: justify;
 }
 
 .topo-do-site .img-topo-site img{
@@ -130,61 +144,165 @@ section.topo-do-site .flex {
 /* ESTILO DAS ESPECIALIDADES */
 
 section.especialidades{
-    padding: 40px auto ;
+    padding: 40px 4% ;
     
 }
 
 section.especialidades .flex {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-}
-
- .txt-container {
-    color: rgb(2, 2, 2);
-    font-size: 35px;
-    padding: 30px;
-
+    padding: 100px 4%;
 }
 
 .especialidades h2 {
-    color: rgb(2, 2, 2);
     font-size: 50px;
     text-align: center;
-    padding: 40px;
+    padding: 10px 0 0 0;
+
 }
 
+/* Container */
 
 .container {
-    width: 1200px;
-    padding: 20px;
+    position: relative;
+    width: 350px;
+    height: 550px;
+}
+
+.container .tras p{
+    position: absolute;
+    bottom: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+    font-size: 24px; 
 }
 
-.box{
-    width: 250px;
-    margin: 0 10px;
-    box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
-    transition: 1s;
-    
+.container .tras h2{
+    position: absolute;
+    top: 80px;
+    display: flex;
+    font-size: 60px; 
 }
 
-.box img {
-    display: block;
+.container:hover .flip {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    position: absolute;
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.frente,.tras{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000001b;
+    backface-visibility: hidden;
+
+}
+
+.frente1,.tras1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000001b;
+    backface-visibility: hidden;
+
+}
+
+.frente2,.tras2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000001b;
+    backface-visibility: hidden;
+
+}
+
+.frente {
+    background-image: url(slider/foto2.JPG);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}   
+
+.frente h2{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.582);
+    
     
 }
 
-.box:hover{
-    transform: scale(1.3);
-    z-index: 2;
+.tras{
+    background-color: rgba(17, 17, 17, 0.514);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    
+}
+
+.frente1 {
+    background-image: url(slider/foto3.JPG);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
 
 }
+
+.tras1{
+    background-color: rgb(215, 231, 226);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    
+}
+
+.frente2 {
+    background-image: url(slider/foto4.JPG);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+
+}   
+
+.frente1 h2{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.582);
+    
+}
+
+.frente2 h2{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.582); 
+}
+
+
 
 /* ESTILO SOBRE */
 
@@ -192,9 +310,11 @@ section.especialidades .flex {
 section.sobre{
     padding: 40px 4%;
     
+    
 }
 
 section.sobre .flex {
+    padding: 200px 4%;
     align-items: center;
     gap: 60px;
 }
@@ -222,23 +342,25 @@ section.sobre .flex {
 /* ESTILO DA ROLAGEM DA PAGINA*/
 
 section:nth-of-type(1){
-    background-color:  rgb(2, 2, 4);;
-    
-    
+    background-color:  rgb(2, 2, 4);
+    height: 100vh;  
 }
 
 section:nth-of-type(2){
     background-color: rgb(255, 255, 255); 
+    height: 100vh;
     
 }
 
 section:nth-of-type(3){   
     background-color:  rgb(2, 2, 4);
+    height: 100vh;
    
 }
 
 section:nth-of-type(4){   
     background-color: rgba(5,6,11);
+    height: 90vh;
    
 }
 
@@ -249,6 +371,7 @@ section .contato {
 }
 
 section.contato .flex {
+    padding: 200px 4%;
     align-items: center;
     gap: 60px;
 }
@@ -262,6 +385,21 @@ section.contato .flex {
     height: 400px;
     padding: 40px;
 }
+
+.contato .btn-social button {
+    
+
+    padding: 10px 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 2.0s;
+    
+}
+
+
+
+
 
 
 /* RESPONSIVO */
@@ -285,47 +423,77 @@ section.contato .flex {
         display: none;
     }
     
-
     .img-topo-site img, .img-sobre img{
         width: 100%;
     }
 
-    
     /* TOPO DO SITE*/
 
-   
-
-    section.topo-do-site .flex {
-        gap: 40px;
-        flex-direction: column-reverse
+    section.topo-do-site{
+        height: 100vh;  
     }
 
-    section.topo-do-site{
-        padding: 20px 8%;
+    section.topo-do-site .flex {
+        flex-direction: column-reverse;
+        padding: 0 10px;
     }
 
     .topo-do-site h1 {
         color: white;
         font-size: 30px;
+        text-align: center;
     }
 
     /* Servicos */
 
     section.especialidades{
-        padding: 40px 8%;
+        height: 50%;
+        
+    }
+
+    section.especialidades .flex{
+        flex-direction: column;
+        
     }
 
     .container {
-        flex-direction: column;
-        width: 300px;
+        position: relative;
+        width: 90%; 
+        right: 10px;
+    }
+
+    .container .tras p{
+        position: absolute;
+        text-align: justify;
+        display: flex;
+        font-size: 20px; 
+        top: 200px;
+        margin: 0 4%;
+    }
+    
+    .container .tras h2{
+        position: absolute;
+        display: flex;
+        font-size: 30px; 
+    }
         
+    section.especialidades .flex {
+        gap: 30px;
+        justify-content: center;
+        
+    }
+    
+    .especialidades h2 {
+        font-size: 50px; 
+        text-align: center;
+    
     }
 
     /* ESTILO SOBRE */
 
-
     section.sobre{
-    padding: 40px 8%;
+    padding: 10px 4%;
+    height: 50%;
     }
 
     .sobre .txt-sobre h2{
@@ -333,4 +501,90 @@ section.contato .flex {
         line-height: 35px;
         text-align: center;
     }
+
+    /* MENU MOBILE */
+
+.btn-abrir-menu ion-icon {
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    padding: 20px 0 0 300px;
+    
+}
+
+.menu-mobile{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+    display: block;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+    margin-top: -40px;
+}
+
+.menu-mobile nav ul li a{
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+    
+}
+
+.menu-mobile nav ul li a:hover{
+   background-color: rgb(255, 0, 0);
+   color: black;
+
+}
+
+.overlay-menu {
+    background: rgba(0, 0, 0, 0.89);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+.menu-mobile.btn-fechar {
+   padding: 9px; 
+}
+
+.menu-mobile .btn-fechar ion-icon {
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    padding: 12px 0 0 0;
+}
+
+footer p {
+    color: rgb(184, 184, 184);
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+section:nth-of-type(4){   
+    background-color: rgba(5,6,11);
+    height: 100%;
+   
+}
+
+
 }
